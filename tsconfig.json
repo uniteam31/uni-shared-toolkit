@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"outDir": "dist",
+		"rootDir": "src",
+		"noImplicitAny": true,
+		"module": "ESNext",
+		"target": "ESNext",
+		"jsx": "react-jsx",
+		"allowJs": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"baseUrl": "./",
+		"strict": true
+	},
+	"include": ["src/**/*"],
+	"exclude": [
+		".storybook/main.ts",
+		"node_modules",
+		"**/*.stories.tsx",
+		"rollup.config.mjs"
+	]
+}
