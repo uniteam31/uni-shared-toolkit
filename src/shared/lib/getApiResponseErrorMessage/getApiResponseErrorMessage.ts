@@ -1,0 +1,12 @@
+import axios from 'axios';
+import { ApiResponse } from 'shared/types';
+
+/** Достает сообщение из ответа от api */
+export const getApiResponseErrorMessage = (error: unknown) => {
+	if (!axios.isAxiosError(error)) {
+		return;
+	}
+
+	const response = error.response?.data as ApiResponse<null>;
+	return response.message;
+};

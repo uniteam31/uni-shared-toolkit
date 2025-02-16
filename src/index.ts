@@ -1,5 +1,11 @@
-export * from './api';
+/** Entities */
+export * from './entities/Note';
 
-export * from './const';
+/** Shared */
+export * from './shared/api';
 
-export * from './hooks';
+export * from './shared/const';
+
+export * from './shared/hooks';
+
+export * from './shared/lib';

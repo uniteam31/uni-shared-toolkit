@@ -34,7 +34,7 @@ const config = (output) => ({
 		sourcemap: true,
 	},
 
-	external: ['react', 'react-dom', 'axios'],
+	external: ['react', 'react-dom', 'axios', 'react/jsx-runtime', 'react-hook-form'],
 
 	plugins: [
 		typescript({
