@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import { axiosInstance } from 'shared/api';
-import { ApiResponse, INote } from 'shared/types';
+import type { ApiResponse, INote } from '@uniteam31/uni-shared-types';
 import { getApiResponseErrorMessage } from 'shared/lib';
 
 type TGetNotesResponse = ApiResponse<INote[]>;
