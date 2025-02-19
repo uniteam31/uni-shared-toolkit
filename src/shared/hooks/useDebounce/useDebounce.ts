@@ -1,4 +1,5 @@
-import { MutableRefObject, useCallback, useRef } from 'react';
+import { useCallback, useRef } from 'react';
+import type { MutableRefObject } from 'react';
 
 // eslint-disable-next-line
 export function useDebounce(callback: (...args: any[]) => void, delay: number) {

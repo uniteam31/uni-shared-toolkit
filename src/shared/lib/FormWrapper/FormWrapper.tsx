@@ -1,5 +1,6 @@
-import { PropsWithChildren, ReactNode } from 'react';
-import { FieldValues, FormProvider, UseFormReturn } from 'react-hook-form';
+import type { PropsWithChildren, ReactNode } from 'react';
+import { FormProvider } from 'react-hook-form';
+import type { FieldValues, UseFormReturn } from 'react-hook-form';
 
 interface IFormWrapperProps<T extends FieldValues> {
 	methods: UseFormReturn<T>;

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { ACCESS_TOKEN_LOCALSTORAGE_KEY } from 'shared/const';
-import { ApiResponse, TAccessToken } from '@uniteam31/uni-shared-types';
+import type { ApiResponse, TAccessToken } from '@uniteam31/uni-shared-types';
 
 const axiosInstance = axios.create({
 	baseURL: __API_URL__,
