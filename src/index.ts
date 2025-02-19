@@ -1,6 +1,3 @@
-/** Entities */
-export * from './entities/Note';
-
 /** Shared */
 export * from './shared/api';
 //
