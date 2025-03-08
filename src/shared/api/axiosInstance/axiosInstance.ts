@@ -1,6 +1,11 @@
 import axios from 'axios';
-import { ACCESS_TOKEN_LOCALSTORAGE_KEY } from 'shared/const';
+import {
+	ACCESS_TOKEN_LOCALSTORAGE_KEY,
+	CURRENT_SPACE_ID_COOKIE_HEADER,
+	CURRENT_SPACE_ID_COOKIE_KEY,
+} from 'shared/const';
 import type { ApiResponse, TAccessToken } from '@uniteam31/uni-shared-types';
+import Cookies from 'js-cookie';
 
 const axiosInstance = axios.create({
 	baseURL: __API_URL__,
@@ -29,9 +34,16 @@ const processQueue = (error: unknown, token: string | null = null) => {
 
 axiosInstance.interceptors.request.use((config) => {
 	const accessToken = localStorage.getItem(ACCESS_TOKEN_LOCALSTORAGE_KEY);
+	const currentSpaceID = Cookies.get(CURRENT_SPACE_ID_COOKIE_KEY);
+
 	if (accessToken) {
 		config.headers.Authorization = `Bearer ${accessToken}`;
 	}
+
+	if (currentSpaceID) {
+		config.headers[CURRENT_SPACE_ID_COOKIE_HEADER] = currentSpaceID;
+	}
+
 	return config;
 });
 

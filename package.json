@@ -19,6 +19,7 @@
     "devDependencies": {
         "@eslint/js": "9.16.0",
         "@rollup/plugin-typescript": "12.1.1",
+        "@types/js-cookie": "^3.0.6",
         "@types/react": "18.3.12",
         "@types/react-dom": "19.0.1",
         "axios": "1.7.9",
@@ -35,5 +36,8 @@
         "typescript": "5.7.2",
         "typescript-eslint": "8.16.0"
     },
-    "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+    "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
+    "dependencies": {
+        "js-cookie": "^3.0.5"
+    }
 }
