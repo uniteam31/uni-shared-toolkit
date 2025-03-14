@@ -29,9 +29,11 @@ const processQueue = (error: unknown, token: string | null = null) => {
 
 axiosInstance.interceptors.request.use((config) => {
 	const accessToken = localStorage.getItem(ACCESS_TOKEN_LOCALSTORAGE_KEY);
+
 	if (accessToken) {
 		config.headers.Authorization = `Bearer ${accessToken}`;
 	}
+
 	return config;
 });
 

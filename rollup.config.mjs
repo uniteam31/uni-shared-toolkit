@@ -34,7 +34,7 @@ const config = (output) => ({
 		sourcemap: true,
 	},
 
-	external: ['react', 'react-dom', 'axios', 'react/jsx-runtime', 'react-hook-form'],
+	external: ['react', 'react-dom', 'axios', 'react/jsx-runtime', 'react-hook-form', 'js-cookie'],
 
 	plugins: [
 		typescript({
@@ -46,6 +46,6 @@ const config = (output) => ({
 });
 
 export default [
-	config({ dir: outputCjsPoint, format: 'cjs', esModule: true }),
-	config({ dir: outputEsmPoint, format: 'es' }),
+	config({ dir: outputCjsPoint, format: 'cjs' }),
+	config({ dir: outputEsmPoint, format: 'es', esModule: true }),
 ];

@@ -7,6 +7,7 @@ interface IFormWrapperProps<T extends FieldValues> {
 	children?: ReactNode;
 }
 
+// TODO переименовать в FormContextWrapper
 export const FormWrapper = <T extends FieldValues>(
 	props: PropsWithChildren<IFormWrapperProps<T>>,
 ) => {
