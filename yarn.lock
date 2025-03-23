@@ -451,6 +451,11 @@
     "@typescript-eslint/types" "8.16.0"
     eslint-visitor-keys "^4.2.0"
 
+"@uniteam31/uni-shared-types@0.0.6":
+  version "0.0.6"
+  resolved "https://npm.pkg.github.com/download/@uniteam31/uni-shared-types/0.0.6/fa6fb6fd958d8833b1e7152e5fe7fdbd69afe2b4#fa6fb6fd958d8833b1e7152e5fe7fdbd69afe2b4"
+  integrity sha512-1u9l870ZxRyCQB0nSEliSRVT4o0HDzqCeQk3nUqXrLAzZwaieDbpeAhYkyVOFuZl3QCNr4Mwh9MXh4E6PFjw/Q==
+
 acorn-jsx@^5.3.2:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-5.3.2.tgz#7ed5bb55908b3b2f1bc55c6af1653bada7f07937"
