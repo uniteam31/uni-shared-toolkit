@@ -1,10 +1,6 @@
 import Cookies from 'js-cookie';
 import Cookie from 'js-cookie';
-import {
-	ACCESS_TOKEN_LOCALSTORAGE_KEY,
-	CURRENT_SPACE_ID_COOKIE_KEY,
-	CURRENT_SPACE_ID_LOCALSTORAGE_KEY,
-} from 'shared/const';
+import { CURRENT_SPACE_ID_COOKIE_KEY, CURRENT_SPACE_ID_LOCALSTORAGE_KEY } from 'shared/const';
 import { ISpace } from '@uniteam31/uni-shared-types';
 
 /**
@@ -27,7 +23,6 @@ class CurrentSpaceIDController {
 	}
 
 	clearCurrentSpaceID() {
-		localStorage.removeItem(ACCESS_TOKEN_LOCALSTORAGE_KEY);
 		localStorage.removeItem(CURRENT_SPACE_ID_LOCALSTORAGE_KEY);
 		Cookie.remove(CURRENT_SPACE_ID_COOKIE_KEY);
 	}
