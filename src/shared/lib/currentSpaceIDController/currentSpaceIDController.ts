@@ -1,0 +1,31 @@
+import Cookies from 'js-cookie';
+import Cookie from 'js-cookie';
+import { CURRENT_SPACE_ID_COOKIE_KEY, CURRENT_SPACE_ID_LOCALSTORAGE_KEY } from 'shared/const';
+import { ISpace } from '@uniteam31/uni-shared-types';
+
+/**
+ * @description представляет класс для управления текущим состоянием space в localstorage и cookies
+ * */
+class CurrentSpaceIDController {
+	setCurrentSpaceIDAndSendEvent(spaceID: ISpace['id']) {
+		Cookies.set(CURRENT_SPACE_ID_COOKIE_KEY, spaceID);
+		localStorage.setItem(CURRENT_SPACE_ID_LOCALSTORAGE_KEY, spaceID);
+
+		window.dispatchEvent(new Event('storage'));
+	}
+
+	getCurrentSpaceID() {
+		return Cookies.get(CURRENT_SPACE_ID_COOKIE_KEY);
+	}
+
+	getSavedSpaceID() {
+		return localStorage.getItem(CURRENT_SPACE_ID_LOCALSTORAGE_KEY);
+	}
+
+	clearCurrentSpaceID() {
+		localStorage.removeItem(CURRENT_SPACE_ID_LOCALSTORAGE_KEY);
+		Cookie.remove(CURRENT_SPACE_ID_COOKIE_KEY);
+	}
+}
+
+export { CurrentSpaceIDController };
